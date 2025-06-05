@@ -1,0 +1,109 @@
+.block-schedule {
+  &__wrap {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 3rem;
+  }
+
+  &__title {
+    font-family: "UrbanSlavic";
+    font-size: 4.7rem;
+    line-height: 1;
+    margin: 0 auto;
+  }
+
+  &__main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__side {
+  }
+
+  &__days {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+  }
+
+  &__day {
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #000;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  &__day-bg {
+  }
+
+  &__windows {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+
+  &__window {
+  }
+
+  &__window-inner {
+  }
+
+  &__list {
+  }
+
+  &__item {
+    &.item {
+      display: flex;
+      align-items: flex-start;
+      grid-gap: 2rem;
+      &:not(:last-child) {
+        padding: 0 0 2rem;
+        border-bottom: 1px solid #000;
+        margin: 0 0 2rem;
+      }
+      .item {
+        &__more {
+          width: 9rem;
+          flex: 0 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &__time {
+          font-size: 2.5rem;
+          line-height: 1.3;
+          font-weight: 600;
+        }
+
+        &__place {
+          font-size: 1rem;
+          line-height: 1;
+          font-weight: 500;
+          color: #686868;
+          text-align: center;
+        }
+
+        &__title {
+          font-size: 2rem;
+          line-height: 1.3;
+          font-weight: 600;
+          width: calc((100% - 13rem) / 2);
+        }
+
+        &__subtitle {
+          font-size: 2rem;
+          line-height: 1.3;
+          width: calc((100% - 13rem) / 2);
+        }
+      }
+    }
+  }
+}

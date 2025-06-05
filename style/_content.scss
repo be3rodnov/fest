@@ -1,0 +1,465 @@
+/* Переменные */
+:root {
+  --theme-color: #{$themeColor};
+}
+
+/* По умолчанию для HTML */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @media (min-width: 1920.01px) and (max-width: 3840px) {
+    font-size: calc(16px + 16 * (100vw - 1920px) / 1920);
+  }
+
+  @media (min-width: calc($phoneWidth + 0.1px)) and (max-width: 1920px) {
+    font-size: calc(6px + 10 * (100vw - $phoneWidth) / 1160);
+  }
+  @media (min-width: calc(320px + 0.1px)) and (max-width: $phoneWidth) {
+    font-size: calc(8px + 8 * (100vw - 320px) / 440);
+  }
+  scroll-behavior: smooth;
+}
+
+/* По умолчанию для BODY */
+body {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  background: $bodyBackground;
+  color: $bodyColor;
+  font-size: $bodyFontSize;
+  line-height: $bodyLineHeight;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  min-height: 100%;
+  @media (max-width: $phoneWidth) {
+    &:has(.mobile-window.active) {
+      overflow: hidden;
+      .full-dark {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &:has(a:hover, .button:hover, .slick-arrow:hover) {
+    .circle {
+      &__inner {
+        border: 0.5px solid $mainColor1;
+        background: rgba(0, 187, 255, 0.5);
+        transform: scale(2);
+      }
+    }
+  }
+  &.page-inner {
+    .page-inner-bg {
+      display: block;
+      pointer-events: none;
+    }
+    .block-shop {
+      background: transparent;
+      &__bg {
+        display: none;
+      }
+    }
+    .block-shop {
+      &__wrap {
+        padding-top: 0;
+      }
+    }
+  }
+}
+.page-inner-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 1px);
+  z-index: -1;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: bg-anim 30s linear infinite;
+    transform-origin: bottom center;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 12, 51, 0.75);
+    backdrop-filter: blur(7px);
+    z-index: 1;
+  }
+}
+@keyframes bg-anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*! content {{{ */
+
+/**
+ * Эти стили будут применены и к сайту, и к контенту в визуальном редакторе
+ */
+
+/* Все элементы */
+* {
+  /* Избегаем увеличения шрифтов */
+  max-height: 999999px;
+  text-size-adjust: 100%;
+
+  /* Одинаковое значение у всех элементов */
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+/* Выделение */
+::selection {
+  background: $themeColor;
+  color: $whiteColor;
+}
+
+/* Шрифт по умолчанию */
+body,
+body.mce-content-body,
+input,
+select,
+textarea,
+button {
+  font-family: $bodyFontFamily;
+}
+
+/* Размер шрифта в таблицах */
+table,
+tr,
+td,
+th {
+  font-size: 1em;
+}
+
+/* Контент в визуальном редакторе */
+body.mce-content-body {
+  margin: 0;
+  padding: 1rem 1em 1rem 1em;
+  background: $whiteColor;
+  color: $bodyColor;
+  font-size: $bodyFontSize;
+  line-height: $bodyLineHeight;
+  cursor: default;
+}
+
+/* Элементы управления по умолчанию */
+input,
+select,
+textarea,
+button {
+  font-size: 1em;
+  appearance: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* Ссылки по умолчанию */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+  /* При наведении по умолчанию */
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+
+    u {
+      text-decoration: none;
+    }
+  }
+
+  /* Подчёркнутые ссылки в пользовательском контенте */
+  body.mce-content-body &,
+  table.data &,
+  .html &,
+  .uk-html &,
+  .group &,
+  .field & {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.button,
+    &.uk-button,
+    &.btn {
+      text-decoration: none;
+    }
+  }
+
+  /* Картинки в ссылках по умолчанию */
+  img {
+    border: none;
+  }
+}
+
+/* Курсоры по умолчанию */
+a,
+a *,
+button {
+  cursor: pointer;
+}
+
+/* Параграф по умолчанию */
+p,
+div.p {
+  margin: 1em 0 1em 0;
+  padding: 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Заголовок 1 */
+h1,
+.h1 {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0 0 1.875rem 0;
+  padding: 0;
+  color: $bodyColor;
+  font-weight: bold;
+  text-transform: none;
+}
+
+/* Заголовок 2 */
+h2,
+.h2 {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 600;
+  margin: 1.25rem 0 1.25rem 0;
+  padding: 0;
+  color: $bodyColor;
+  text-transform: none;
+}
+
+/* Заголовок 3 */
+h3,
+.h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.25rem 0 1.25rem 0;
+  padding: 0;
+  color: $bodyColor;
+  font-weight: bold;
+  text-transform: none;
+}
+
+/* Заголовок 4 */
+h4,
+.h4 {
+  font-size: 1em;
+  margin: 1em 0 1em 0;
+  padding: 0;
+  color: $blackColor;
+  font-weight: bold;
+  text-transform: none;
+}
+
+@media only screen and (max-width: $mobileWidth) {
+  /* Заголовок 1 */
+  h1,
+  .h1 {
+    font-size: 3rem;
+  }
+
+  /* Заголовок 2 */
+  h2,
+  .h2 {
+    font-size: 3rem;
+  }
+
+  /* Заголовок 3 */
+  h3,
+  .h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Все заголовки */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  /* Первый заголовок */
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+/* Черта */
+hr {
+  border: 0;
+  color: $grayBorder;
+  background-color: $grayBorder;
+  height: 1px;
+  margin: 1em 0 1em 0;
+  clear: both;
+}
+
+/* Ошибка */
+p.error {
+  padding: 1em;
+  color: $errorColor;
+  border-left: 0.1875rem solid $errorColor;
+}
+
+/* Сообщение */
+p.notice {
+  padding: 1em;
+  border-left: 0.1875rem solid $grayBorder;
+}
+
+/* Подсветка в результатах поиска */
+b.hi {
+  font-weight: inherit;
+  background: $mainColor5;
+}
+
+/* Артефакты */
+:link,
+:visited,
+:hover,
+:active,
+:focus {
+  outline: none;
+}
+
+/* Кнопки */
+a.button,
+button.button,
+.field-input--submit button,
+body .button {
+  box-sizing: border-box;
+  padding: 0.9375rem 1.5rem;
+  background: $mainColor3;
+  border: 1px solid $mainColor2;
+  border-radius: 0.875rem;
+  color: $bodyColor;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  vertical-align: middle;
+  display: flex;
+  align-items: flex-start;
+  grid-gap: 0.75rem;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    background: $mainColor4;
+  }
+
+  span {
+    margin: -0.25rem 0 0.25rem;
+    & + svg {
+      margin: 0 0.3125rem 0 0;
+    }
+  }
+  svg {
+    height: 1.375rem;
+  }
+  @media (max-width: $phoneWidth) {
+    border-radius: 0.75rem;
+
+    span {
+      margin: -0.3rem 0 0.3rem;
+    }
+    svg {
+      height: 1.6rem;
+    }
+  }
+}
+
+/* Невидимый якорь */
+a.anchor {
+  display: block;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+}
+
+/* Очистка плавающих элементов */
+.clearfix:after,
+.html:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  flex: 0 0 0;
+}
+
+/* Полупрозрачное */
+.no-menu {
+  opacity: 0.5;
+}
+
+/* Картинка с подписью */
+figure.image {
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/*! }}} content */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,83 @@
+/**
+ * Переменные
+ */
+
+/* Цвет текста */
+$bodyColor: #000c33;
+/* Фон страницы */
+$bodyBackground: #fff;
+/* Размер шрифта */
+$bodyFontSize: 16px;
+/* Высота строки */
+$bodyLineHeight: 1.5;
+/* Шрифт */
+$bodyFontFamily: 'Cruinn', sans-serif;
+
+/* Стандартные цвета */
+
+$whiteColor: #fff;
+$blackColor: #000;
+$themeColor: #009ad2;
+$redColor: #e70000;
+$orangeColor: #f93;
+$yellowColor: #fd0;
+$greenColor: #093;
+$tealColor: #3c9;
+$indigoColor: #60f;
+$purpleColor: #63c;
+$pinkColor: #f39;
+
+
+$mainColor1: #000c32;
+// $mainColor2: #009ad2;
+$mainColor2: #00bcff;
+$mainColor3: #ffffff;
+// $mainColor4: #8adeff;
+$mainColor4: $mainColor2;
+// $mainColor5: #ccfe9a;
+$mainColor5: $mainColor2;
+
+/* Оттенки серого */
+
+$grayText: #999;
+$grayBorder: #ccc;
+$grayBackground: #e6e6e6;
+$grayHover: #f6f6f6;
+
+/* Адаптивность */
+
+$notebookWidth: 1200px;
+$mobileWidth: 1000px;
+$tabletWidth: 1000px;
+$phoneWidth: 760px;
+$smallWidth: 480px;
+
+/**
+ * Формы
+ */
+
+/* Группы элементов */
+
+/* Цвет фона группы элементов */
+$groupBackground: #e6e6e6;
+
+/* Стандартное поле */
+
+/* Высота поля */
+$inputHeight: 3.0625rem;
+/* Цвет текста поля */
+$inputColor: #000;
+/* Цвет фона поля */
+$inputBackground: #f6f6fa;
+/* Цвет границы поля */
+$inputBorderColor: #f6f6fa;
+/* Радиус скругления углов поля */
+$inputBorderRadius: 0.75rem;
+/* Цвет подсказки внутри поля */
+$placeholderColor: #999;
+/* Цвет границы checkbox и radio */
+$checkBorderColor: #999;
+
+/* Цвет ошибок */
+$errorColor: #f00;
+
