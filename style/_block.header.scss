@@ -33,6 +33,27 @@
         }
 
         &__item {
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #333;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(0.5rem);
+            transition: 0.3s ease-in-out;
+          }
+          &:hover {
+            &:after {
+              opacity: 1;
+              visibility: visible;
+              transform: none;
+            }
+          }
         }
 
         &__link {
@@ -75,6 +96,10 @@
           display: block;
           width: 2.25rem;
           height: 2.25rem;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.05);
+          }
           img {
             display: block;
             width: 100%;
@@ -82,20 +107,20 @@
         }
       }
     }
-  }
-  @media (max-width: $phoneWidth) {
-    &__menu.menu {
+    &__menu-toggle {
       display: none;
     }
+  }
+  @media (max-width: $phoneWidth) {
     &__contacts.contacts {
-      margin: 0 0 0 2rem;
+      margin: 0 1rem 0 1rem;
       order: 1;
       .contacts {
         &__email {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
         &__phone {
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
       }
     }
@@ -106,6 +131,40 @@
         .social__item {
           width: 3rem;
           height: 3rem;
+          -webkit-tap-highlight-color: transparent;
+        }
+      }
+    }
+    &__menu-toggle {
+      display: block;
+      width: 4.4rem;
+      height: 4.4rem;
+      position: relative;
+      order: 2;
+      -webkit-tap-highlight-color: transparent;
+      &.active {
+        img {
+          &:nth-child(1) {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+          }
+          &:nth-child(2) {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease-in-out;
+        &:nth-child(2) {
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 0;
         }
       }
     }

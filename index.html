@@ -37,10 +37,11 @@
           <a class="block-header__logo" href="/"><img src="./images/logo.png" alt="" /></a>
           <div class="block-header__menu menu">
             <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="#">Расписание</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Партнеры</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Место проведения</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+              <li class="menu__item"><a class="menu__link" href="#block-about">О нас</a></li>
+              <li class="menu__item"><a class="menu__link" href="#block-schedule">Расписание</a></li>
+              <li class="menu__item"><a class="menu__link" href="#block-partners">Партнеры</a></li>
+              <li class="menu__item"><a class="menu__link" href="#block-contacts">Место проведения</a></li>
+              <li class="menu__item"><a class="menu__link" href="#block-contacts">Контакты</a></li>
             </ul>
           </div>
           <div class="block-header__contacts contacts">
@@ -51,10 +52,18 @@
             <a class="social__item" href="https://t.me/banniylev/11242"><img src="./images/icons/icon-tg.svg" alt="" /></a>
             <a class="social__item" href="https://vk.com/evgenikostin"><img src="./images/icons/icon-vk.svg" alt="" /></a>
           </div>
+          <div class="block-header__menu-toggle">
+            <img src="./images/icons/icon-burger.svg" alt="" /><img src="./images/icons/icon-close.svg" alt="" />
+          </div>
         </div>
       </div>
     </header>
     <main>
+      <section class="block-m-menu">
+        <div class="container">
+          <div class="block-m-menu__wrap"><div class="block-m-menu__menu menu"></div></div>
+        </div>
+      </section>
       <section class="block-b">
         <div class="container">
           <div class="block-b__wrap">
@@ -68,6 +77,7 @@
         </div>
       </section>
       <section class="block-about">
+        <a class="anchor" id="block-about"></a>
         <div class="container">
           <div class="block-about__wrap">
             <div class="block-about__main">
@@ -90,14 +100,15 @@
         </div>
       </section>
       <section class="block-schedule">
+        <a class="anchor" id="block-schedule"></a>
         <div class="container">
           <div class="block-schedule__wrap">
             <h2 class="block-schedule__title">Программа мероприятия</h2>
             <div class="block-schedule__main">
               <div class="block-schedule__side">
                 <div class="block-schedule__days">
-                  <div class="block-schedule__day active">19/07/25</div>
-                  <div class="block-schedule__day">20/07/25</div>
+                  <div class="block-schedule__day active">19/07/25 <span>выбрано</span></div>
+                  <div class="block-schedule__day">20/07/25 <span>выбрано</span></div>
                 </div>
               </div>
               <div class="block-schedule__windows">
@@ -199,6 +210,7 @@
         </div>
       </section>
       <section class="block-org">
+        <a class="anchor" id="block-org"></a>
         <div class="container">
           <div class="block-org__wrap">
             <h2 class="block-org__title">Организаторы</h2>
@@ -211,6 +223,7 @@
         </div>
       </section>
       <section class="block-partners">
+        <a class="anchor" id="block-partners"></a>
         <div class="container">
           <div class="block-partners__wrap">
             <h2 class="block-partners__title">Партнёры</h2>
@@ -228,6 +241,7 @@
         </div>
       </section>
       <section class="block-contacts">
+        <a class="anchor" id="block-contacts"></a>
         <div class="container">
           <div class="block-contacts__wrap">
             <h2 class="block-contacts__title">Контакты</h2>

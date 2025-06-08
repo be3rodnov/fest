@@ -433,6 +433,11 @@ a.anchor {
   font-size: 0;
   line-height: 0;
   text-decoration: none;
+  position: absolute;
+  top: 0;
+  @media (max-width: $phoneWidth) {
+    top: -3rem;
+  }
 }
 
 /* Очистка плавающих элементов */
