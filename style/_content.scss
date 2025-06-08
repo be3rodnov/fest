@@ -15,7 +15,7 @@ html {
   }
 
   @media (min-width: calc($phoneWidth + 0.1px)) and (max-width: 1920px) {
-    font-size: calc(6px + 10 * (100vw - $phoneWidth) / 1160);
+    font-size: calc(10px + 6 * (100vw - $phoneWidth) / 1160);
   }
   @media (min-width: calc(320px + 0.1px)) and (max-width: $phoneWidth) {
     font-size: calc(8px + 8 * (100vw - 320px) / 440);
@@ -252,23 +252,26 @@ div.p {
 /* Заголовок 1 */
 h1,
 .h1 {
-  font-size: 4rem;
+  font-family: "Vertiger";
+  font-size: 6.2rem;
   line-height: 1;
-  font-weight: 600;
+  letter-spacing: 0.01em;
   margin: 0 0 1.875rem 0;
+  font-weight: 400;
   padding: 0;
   color: $bodyColor;
-  font-weight: bold;
   text-transform: none;
 }
 
 /* Заголовок 2 */
 h2,
 .h2 {
-  font-size: 4rem;
+  font-family: "Vertiger";
+  font-size: 5.6rem;
   line-height: 1;
-  font-weight: 600;
+  letter-spacing: 0.01em;
   margin: 1.25rem 0 1.25rem 0;
+  font-weight: 400;
   padding: 0;
   color: $bodyColor;
   text-transform: none;
@@ -277,12 +280,14 @@ h2,
 /* Заголовок 3 */
 h3,
 .h3 {
-  font-size: 1.25rem;
-  line-height: 1.2;
+  font-family: "Vertiger";
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
   margin: 1.25rem 0 1.25rem 0;
+  font-weight: 400;
   padding: 0;
   color: $bodyColor;
-  font-weight: bold;
   text-transform: none;
 }
 
@@ -297,25 +302,25 @@ h4,
   text-transform: none;
 }
 
-@media only screen and (max-width: $mobileWidth) {
-  /* Заголовок 1 */
-  h1,
-  .h1 {
-    font-size: 3rem;
-  }
+// @media only screen and (max-width: $mobileWidth) {
+//   /* Заголовок 1 */
+//   h1,
+//   .h1 {
+//     font-size: 3rem;
+//   }
 
-  /* Заголовок 2 */
-  h2,
-  .h2 {
-    font-size: 3rem;
-  }
+//   /* Заголовок 2 */
+//   h2,
+//   .h2 {
+//     font-size: 3rem;
+//   }
 
-  /* Заголовок 3 */
-  h3,
-  .h3 {
-    font-size: 1rem;
-  }
-}
+//   /* Заголовок 3 */
+//   h3,
+//   .h3 {
+//     font-size: 1rem;
+//   }
+// }
 
 /* Все заголовки */
 h1,
@@ -462,4 +467,7 @@ figure.image {
   padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
+}
+main {
+  padding-bottom: 7rem;
 }

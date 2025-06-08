@@ -47,9 +47,10 @@
 }
 
 @font-face {
-  font-family: "UrbanSlavic";
-  src: url("./fonts/UrbanSlavic/UrbanSlavicRegular.woff2") format("woff2"), url("./fonts/UrbanSlavic/UrbanSlavicRegular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: normal;
+    font-family: 'Vertiger';
+    src: url('./fonts/Vertiger/VertigerRegular.woff2') format('woff2'),
+        url('./fonts/Vertiger/VertigerRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+

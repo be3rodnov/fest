@@ -2,6 +2,8 @@
   background: #fff;
   position: sticky;
   top: 0;
+  z-index: 999;
+  box-shadow: 0 0 1rem -0.5rem rgb(0 0 0 / 50%);
   &__wrap {
     padding: 1rem 0;
     display: flex;
@@ -79,6 +81,11 @@
           }
         }
       }
+    }
+  }
+  @media (max-width: $phoneWidth) {
+    &__menu.menu {
+      display: none;
     }
   }
 }

@@ -23,6 +23,12 @@
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="./style.min.css" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" charset="utf-8" async src="./scripts/scripts.js"></script>
   </head>
   <body>
     <header class="block-header">
@@ -31,7 +37,6 @@
           <a class="block-header__logo" href="/"><img src="./images/logo.png" alt="" /></a>
           <div class="block-header__menu menu">
             <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="#">Программа</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Расписание</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Партнеры</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Место проведения</a></li>
@@ -53,7 +58,7 @@
       <section class="block-b">
         <div class="container">
           <div class="block-b__wrap">
-            <div class="block-b__title">Фестиваль банной культуры «Хумай Фест»</div>
+            <h1 class="block-b__title">Фестиваль банной культуры <br />«Хумай Фест»</h1>
             <div class="block-b__subtitle">
               Приглашаем вас принять участие в масштабном культурнооздоровительном банном фестивале «Хумай Фест», который пройдёт в городе Стерлитамак
               (Республика Башкортостан) и соберёт гостей со всей России.
@@ -66,7 +71,7 @@
         <div class="container">
           <div class="block-about__wrap">
             <div class="block-about__main">
-              <div class="block-about__title">О фестивале</div>
+              <h2 class="block-about__title">О фестивале</h2>
               <div class="block-about__text">
                 <p>
                   Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности играет
@@ -80,24 +85,23 @@
                 </p>
               </div>
             </div>
-            <div class="block-about__pic"><img src="./images/demo.jpg" alt=""></div>
+            <div class="block-about__pic"><img src="./images/demo.jpg" alt="" /></div>
           </div>
         </div>
       </section>
       <section class="block-schedule">
         <div class="container">
           <div class="block-schedule__wrap">
-            <div class="block-schedule__title">Программа мероприятия</div>
+            <h2 class="block-schedule__title">Программа мероприятия</h2>
             <div class="block-schedule__main">
               <div class="block-schedule__side">
                 <div class="block-schedule__days">
-                  <div class="block-schedule__day">19/07/25</div>
+                  <div class="block-schedule__day active">19/07/25</div>
                   <div class="block-schedule__day">20/07/25</div>
-                  <div class="block-schedule__day-bg"></div>
                 </div>
               </div>
               <div class="block-schedule__windows">
-                <div class="block-schedule__window">
+                <div class="block-schedule__window active">
                   <div class="block-schedule__window-inner">
                     <div class="block-schedule__list">
                       <div class="block-schedule__item item">
@@ -143,12 +147,122 @@
                     </div>
                   </div>
                 </div>
-                <div class="block-schedule__window"></div>
+                <div class="block-schedule__window">
+                  <div class="block-schedule__window-inner">
+                    <div class="block-schedule__list">
+                      <div class="block-schedule__item item">
+                        <div class="item__more">
+                          <div class="item__time">10:10</div>
+                          <div class="item__place">Ярмарка</div>
+                        </div>
+                        <div class="item__title">Открытие мероприятия</div>
+                        <div class="item__subtitle">Текст описания</div>
+                      </div>
+                      <div class="block-schedule__item item">
+                        <div class="item__more">
+                          <div class="item__time">10:10</div>
+                          <div class="item__place">Палаточный городок</div>
+                        </div>
+                        <div class="item__title">Открытие мероприятия</div>
+                        <div class="item__subtitle">Текст описания</div>
+                      </div>
+                      <div class="block-schedule__item item">
+                        <div class="item__more">
+                          <div class="item__time">10:10</div>
+                          <div class="item__place">Сцена</div>
+                        </div>
+                        <div class="item__title">Открытие мероприятия</div>
+                        <div class="item__subtitle">Текст описания</div>
+                      </div>
+                      <div class="block-schedule__item item">
+                        <div class="item__more">
+                          <div class="item__time">10:10</div>
+                          <div class="item__place">Фуд-корт</div>
+                        </div>
+                        <div class="item__title">Открытие мероприятия</div>
+                        <div class="item__subtitle">Текст описания</div>
+                      </div>
+                      <div class="block-schedule__item item">
+                        <div class="item__more">
+                          <div class="item__time">10:10</div>
+                          <div class="item__place">Банный городок</div>
+                        </div>
+                        <div class="item__title">Открытие мероприятия</div>
+                        <div class="item__subtitle">Текст описания</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <section class="block-org">
+        <div class="container">
+          <div class="block-org__wrap">
+            <h2 class="block-org__title">Организаторы</h2>
+            <div class="block-org__list">
+              <a class="block-org__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-org__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-org__item"><img src="./images/logo.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="block-partners">
+        <div class="container">
+          <div class="block-partners__wrap">
+            <h2 class="block-partners__title">Партнёры</h2>
+            <div class="block-partners__list">
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+              <a class="block-partners__item"><img src="./images/logo.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="block-contacts">
+        <div class="container">
+          <div class="block-contacts__wrap">
+            <h2 class="block-contacts__title">Контакты</h2>
+            <div class="block-contacts__main">
+              <div class="block-contacts__info">
+                <b>Место проведения:</b> Микрорайон Советский, Стерлитамак, Республика Башкортостан <br />
+                <br />
+                <b>Координаты:</b> 53.609300, 55.964251 <br />
+                <br />
+                <b>Email:</b> <a href="mailto:zolotoylevstr@yandex.ru">zolotoylevstr@yandex.ru</a>
+                <br />
+                <b>Телефон:</b> <a href="tel:+79170409294">+7 (917) 04-09-294</a>
+              </div>
+              <div class="block-contacts__social social">
+                <a class="social__item" href="https://t.me/banniylev/11242"><img src="./images/icons/icon-tg.svg" alt="" /></a>
+                <a class="social__item" href="https://vk.com/evgenikostin"><img src="./images/icons/icon-vk.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="block-contacts__map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A3d067b17cdb550d791b8eed647a2eaad429aa1fc707caaf56749785fa578fe24&amp;source=constructor"
+                frameborder="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="block-footer">
+      <div class="container">
+        <div class="block-footer__wrap">
+          <div class="block-footer__copyright">© 2025 ХУМАЙФЕСТ</div>
+          <div class="block-footer__dev">Разработано - <a href="https://t.me/be3rodnov">be3rodnov</a></div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,25 @@
+.block-footer {
+  background: #333;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  &__dev {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: #fff;
+    a {
+      font-weight: 600;
+    }
+  }
+}
