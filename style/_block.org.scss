@@ -1,4 +1,5 @@
-.block-org {  position: relative;
+.block-org {
+  position: relative;
   &__wrap {
     padding: 7rem 0 0;
     display: flex;
@@ -47,6 +48,9 @@
     &__list {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;
+    }
+    &__item {
+      padding-top: 100%;
     }
   }
 }
