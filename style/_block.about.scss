@@ -37,8 +37,13 @@
   }
   @media (max-width: $phoneWidth) {
     &__wrap {
+      padding: 5rem 0 0;
+
       display: flex;
       flex-direction: column;
+    }
+    &__text {
+      font-size: 1.6rem;
     }
   }
 }

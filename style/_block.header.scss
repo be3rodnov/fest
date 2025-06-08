@@ -87,5 +87,27 @@
     &__menu.menu {
       display: none;
     }
+    &__contacts.contacts {
+      margin: 0 0 0 2rem;
+      order: 1;
+      .contacts {
+        &__email {
+          font-size: 1.5rem;
+        }
+        &__phone {
+          font-size: 2rem;
+        }
+      }
+    }
+    &__social {
+      &.social {
+        display: flex;
+        margin: 0 0 0 auto;
+        .social__item {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
   }
 }

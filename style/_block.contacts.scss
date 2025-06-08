@@ -55,8 +55,12 @@
   }
   @media (max-width: $phoneWidth) {
     &__wrap {
+      padding: 5rem 0 0;
       display: flex;
       flex-direction: column;
+    }
+    &__info {
+      font-size: 1.6rem;
     }
   }
 }

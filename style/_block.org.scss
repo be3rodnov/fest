@@ -41,6 +41,9 @@
     }
   }
   @media (max-width: $phoneWidth) {
+    &__wrap {
+      padding: 5rem 0 0;
+    }
     &__list {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;

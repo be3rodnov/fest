@@ -467,7 +467,18 @@ figure.image {
   padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: $phoneWidth) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (max-width: $smallWidth) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 main {
   padding-bottom: 7rem;
+  @media (max-width: $phoneWidth) {
+    padding-bottom: 5rem;
+  }
 }

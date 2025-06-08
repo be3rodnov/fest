@@ -111,6 +111,9 @@
     }
   }
   @media (max-width: $phoneWidth) {
+    &__wrap {
+      padding: 5rem 0 0;
+    }
     &__title {
       margin: 0;
     }
