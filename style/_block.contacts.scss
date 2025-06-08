@@ -67,4 +67,15 @@
       aspect-ratio: 1/1;
     }
   }
+  &__social {
+    &.social {
+      grid-gap: 2rem;
+      .social {
+        &__item {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
 }
